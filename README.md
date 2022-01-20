@@ -8,4 +8,4 @@ Project developed with Java (BackEnd), Angular (Frontend) and MySQL (DataBase)
 * Users can edit their profile and to create a board they can choose to use a template.
 
 ## Demo
-Demo can be found here: ![Demo](https://github.com/AtasieOana/Cars-Overtaking-2D/blob/main/Demo.gif)
+Demo can be found here: ![Demo](https://github.com/AtasieOana/Task-Management-Platform/blob/main/Demo.mp4)
