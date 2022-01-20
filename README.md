@@ -12,11 +12,11 @@ Demo can be found here: [Demo](https://github.com/AtasieOana/Task-Management-Pla
 
 ## How to Run the Project
 * Open and run database with MySql
-* For the backend part: 
+* For the backend part run next line in backend folder: 
 ```
 mvn spring-boot:run
 ```
-* For the frontend part:
+* For the frontend part run next lines in frontend folder:
 ```
 npm install
 ng serve
