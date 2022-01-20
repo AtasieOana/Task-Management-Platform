@@ -3,6 +3,7 @@ Project developed with Java (Backend), Angular (Frontend) and MySQL (Database)
 
 ## Content
 * The platform allows the organization of projects in boards. 
+* Users can log in / register.
 * Each board includes tasks characterized by content, label, start and end date.
 * Several users with different roles can be added to a board and depending on the role there is the possibility to add / edit / delete tasks.
 * Users can edit their profile and to create a board they can choose to use a template.
