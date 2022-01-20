@@ -1,5 +1,5 @@
 # Task Management Platform
-Project developed with Java (BackEnd), Angular (Frontend) and MySQL (DataBase)
+Project developed with Java (Backend), Angular (Frontend) and MySQL (Database)
 
 ## Content
 * The platform allows the organization of projects in boards. 
