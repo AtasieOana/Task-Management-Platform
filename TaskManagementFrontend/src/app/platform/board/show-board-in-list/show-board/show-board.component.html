@@ -1,0 +1,35 @@
+<app-private-menu></app-private-menu>
+<div class="display-flex">
+  <span class="class-elements">
+    <label>
+      <input class="board-name"  type='text'  [(ngModel)]="board.name" (change)="changeBoardName($event)" [readonly]="userBoard.userType != 'admin'">
+    </label>
+  </span>
+  <label class="class-elements" *ngIf="userBoard.userType == 'admin'">
+    <select class="board-options" name="privacy" [(ngModel)]="initialPrivacy" (change)="selectOption()">
+      <option [value]="true" [selected]="initialPrivacy == true">Private</option>
+      <option [value]="false" [selected]="initialPrivacy == false">Public</option>
+    </select>
+  </label>
+  <div class="class-elements" (click)="seeUsers($event)">See users</div>
+  <button class="class-elements" (click)="removeBoard()" *ngIf="userBoard.userType == 'admin'"> Delete board </button>
+  <button class="class-elements" (click)="leaveBoard()" *ngIf="userBoard.userType != 'admin' &&userBoard.userType != 'viewer'"> Leave board </button>
+  <button class="class-elements" (click)="useTemplate()" *ngIf="userBoard.userType == 'viewer'"> Use template </button>
+
+</div>
+
+<div>
+  <button *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'" class="add-task-button" (click)="createTaskList()" [disabled]="alreadyExist">Add new list</button>
+</div>
+
+<div class="task-list-container">
+  <app-show-task-list  (tasksListChanged)="onTaskListChanged()" [taskList]="taskList" [alreadyExist] = "alreadyExist"
+                       *ngFor="let taskList of taskLists  | paginate: config"  [userBoard]="userBoard"
+                       class="task-list-show"></app-show-task-list>
+</div>
+
+<div class="pagination" *ngIf="taskLists.length != 0">
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+

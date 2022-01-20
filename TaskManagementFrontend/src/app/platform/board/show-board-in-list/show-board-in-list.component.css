@@ -1,0 +1,13 @@
+.show-board-container{
+  border: 2px solid black;
+  min-height: 100px;
+  margin: 10px;
+  font-size: larger;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-weight: bold;
+  word-break: break-all;
+  padding: 10px;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}

@@ -1,0 +1,21 @@
+.task-list-container{
+  margin: 5px;
+}
+
+.add-task{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+}
+
+.add-task-button{
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 50%;
+  height: 10%;
+  font-size: large;
+  font-weight: bold;
+  border: 3px solid black;
+  background-color: ivory;
+}

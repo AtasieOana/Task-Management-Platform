@@ -1,0 +1,30 @@
+.error404{
+  margin-top: 50px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.title {
+  font-size: xx-large;
+  float: right;
+  font-weight:bold;
+}
+
+#error{
+  margin-top: 50px;
+  float: left;
+}
+
+#error p{
+  padding-top:30px;
+  font-weight:bolder;
+  font-size:large;
+}
+
+#reasons{
+  list-style-type:square;
+  font-weight:bolder;
+  font-size:large;
+  padding-top:10px;
+}

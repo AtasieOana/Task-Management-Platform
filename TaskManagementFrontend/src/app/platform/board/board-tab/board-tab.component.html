@@ -1,0 +1,4 @@
+<div class = "board-list">
+  <button class="create-board-button" (click)="createBoard()" [disabled]="alreadyExist">Create board</button>
+  <app-show-board-in-list class = "board-element"  [userBoard]="userBoard" *ngFor="let userBoard of userBoards"></app-show-board-in-list>
+</div>

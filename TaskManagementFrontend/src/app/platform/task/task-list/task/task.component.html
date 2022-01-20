@@ -1,0 +1,22 @@
+<mat-card class = "task-card">
+  <div class="label" *ngIf="task.labelColor" [style.background-color]="task.labelColor"></div>
+  <p class="task-creation">Task created by {{task.ownerUser.name}} on {{task.createDate | date:'yyyy-MM-dd'}}.</p>
+  <p class="task-date-message">{{dateMessage}}</p>
+  <p class="task-title">{{task.title}}</p>
+  <p class="task-content"  *ngIf="task.content" >
+    <span  class="icon-align">
+      <mat-icon>description</mat-icon>
+      {{task.content}}
+    </span>
+  </p>
+  <div class="task-users" *ngIf="users.length!=0">
+    <span class="icon-align">
+      <mat-icon>supervised_user_circle</mat-icon> Assigned users:
+    </span>
+    <p class="task-user" *ngFor="let user of users"> - {{user.name}}</p>
+  </div>
+  <span class="task-icons" *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'">
+    <mat-icon matTooltip="Delete task" (click)="deleteTask()">delete</mat-icon>
+    <mat-icon matTooltip="Edit teacher" (click)="editTask($event)">edit</mat-icon>
+  </span>
+</mat-card>

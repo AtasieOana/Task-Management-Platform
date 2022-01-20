@@ -1,0 +1,8 @@
+<mat-list-item>
+  <span class="user-details">
+   {{userShow.email}}
+  </span>
+  <mat-icon matTooltip="Delete user" (click)="deleteUser()" *ngIf="userIsAdmin">delete_forever</mat-icon>
+  <mat-icon matTooltip="Edit user" (click)="editUserRole()" *ngIf="userIsAdmin">edit</mat-icon>
+</mat-list-item>
+<mat-divider></mat-divider>

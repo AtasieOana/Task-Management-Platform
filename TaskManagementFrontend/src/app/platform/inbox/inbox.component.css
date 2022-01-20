@@ -1,0 +1,21 @@
+.title{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.inbox-class{
+  padding-bottom: 30px;
+  display: block;
+}
+
+.empty{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  font-weight: bolder;
+  font-size: x-large;
+  color: red;
+}

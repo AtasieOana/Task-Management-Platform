@@ -1,0 +1,9 @@
+mat-icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.user-details {
+  font-weight: 500;
+  color: darkslategray;
+}

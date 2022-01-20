@@ -1,0 +1,19 @@
+.template-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 85%;
+}
+
+.board-element{
+  width: 30%;
+}
+
+
+@media (max-width: 800px) {
+  .board-element{
+    width: 50%;
+  }
+}

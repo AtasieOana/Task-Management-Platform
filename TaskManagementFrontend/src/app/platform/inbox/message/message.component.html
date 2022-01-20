@@ -1,0 +1,5 @@
+<div class="message-container" [style.background-color]="!inboxMessage.seen ? 'rgba(255,0,0,0.6)' : 'rgb(255,255,255)'">
+  <button *ngIf = "inboxMessage.seen == false" class="buttonRead" (click)="markAsRead()">Mark message as read</button>
+  <p class="message-date">Date: <span>{{sendDate}}</span></p>
+  <p class="message-content">{{inboxMessage.message}}</p>
+</div>

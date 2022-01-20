@@ -1,0 +1,7 @@
+<div class = "task-list-container">
+  <app-task (taskListChanged)="onTaskListChanged()" [userBoard]="userBoard"
+            [taskList] = "taskList" [task]="task" *ngFor="let task of tasks"></app-task>
+  <span *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'" class="add-task">
+    <button class="add-task-button" (click)="addTask($event)">Add task</button>
+  </span>
+</div>
