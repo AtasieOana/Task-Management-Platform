@@ -9,3 +9,16 @@ Project developed with Java (BackEnd), Angular (Frontend) and MySQL (DataBase)
 
 ## Demo
 Demo can be found here: [Demo](https://github.com/AtasieOana/Task-Management-Platform/blob/main/Demo.mp4)
+
+## How to Run the Project
+* Open and run database with MySql
+* For the backend part: 
+```
+mvn spring-boot:run
+```
+* For the frontend part:
+```
+npm install
+ng serve
+```
+
