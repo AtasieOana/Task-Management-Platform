@@ -1,0 +1,97 @@
+.workspace-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+}
+
+.workspace-element{
+  width: 33%;
+}
+
+.create-workspace-button {
+  border: 1px rgb(103, 58, 183) outset;
+  height: 110px;
+  width: 31%;
+  background: white;
+  font-weight: bold;
+  font-size: large;
+  color:black;
+  margin: 10px 8px 8px 9px;
+  box-shadow: 0 4px 2px -1px rgba(103, 58, 183, 0.50),
+  0 3px 3px 0 rgba(103, 58, 183, 0.50),
+  0 3px 3px 0 rgba(103, 58, 183, 0.50);
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  .workspace-element{
+    width: 50%;
+  }
+
+  .create-workspace-button{
+    width: 47%;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .workspace-element{
+    width: 50%;
+  }
+
+  .create-workspace-button{
+    width: 46%;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .workspace-element{
+    width: 50%;
+  }
+
+  .create-workspace-button{
+    width: 45.5%;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .workspace-element{
+    width: 50%;
+  }
+
+  .create-workspace-button{
+    width: 44%;
+  }
+}
+
+@media (max-width: 600px) {
+  .workspace-element{
+    width: 50%;
+  }
+
+  .create-workspace-button{
+    width: 43%;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .workspace-list{
+    flex-direction: column;
+
+  }
+
+  .workspace-element{
+    width: 80%;
+  }
+
+  .create-workspace-button{
+    width: 73%;
+  }
+
+}

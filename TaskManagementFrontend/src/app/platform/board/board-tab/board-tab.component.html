@@ -1,0 +1,14 @@
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"/>
+
+<div class="search" *ngIf = "workspaceId == ''">
+  <input class="search-input fa" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xf002;  Search board">
+</div>
+
+<div class = "board-list-general">
+  <div class="boards-text" *ngIf="workspaceId != ''">Boards:</div>
+  <div class="no-boards" *ngIf = "workspaceId != '' && !userBoards.length ">No boards yet. Try to add one!</div>
+  <div [ngClass]="{'board-list': workspaceId == '', 'board-list-workspace' : workspaceId != '' }" >
+    <button class="create-board-button" (click)="createBoard()" [disabled]="alreadyExist" *ngIf="workspaceId == ''">Create board</button>
+    <app-show-board-in-list class = "board-element"  [userBoard]="userBoard" *ngFor="let userBoard of userBoards | searchFilter:searchText"></app-show-board-in-list>
+  </div>
+</div>

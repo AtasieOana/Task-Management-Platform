@@ -1,0 +1,39 @@
+<app-private-menu></app-private-menu>
+
+<div class = "title">YOUR PROFILE</div>
+
+<div class="form-container">
+  <form #profileForm = "ngForm" (ngSubmit) = "onSubmit(profileForm)" >
+    <label> Email:
+      <br/>
+      <input class=""  type='email' name = "email" [(ngModel)]="user.email" readonly>
+    </label>
+    <br/>
+    <label> Password:
+      <br/>
+      <input class="" type='password' name = "old_password" [(ngModel)]="oldPassword" readonly>
+    </label>
+    <label  *ngIf="isEditMode == true"> New password:
+      <br/>
+      <input class="" type='password' name = "new_password" [(ngModel)]="newPassword">
+    </label>
+    <div *ngIf="passwordLength" class="validationMessage">
+      Password must be at least 5 characters long
+    </div>
+    <br/>
+    <label> Name:
+    <br/>
+      <input class=""  type='text' name = "name" [(ngModel)]="user.name" [readonly]="isEditMode  == false">
+    </label>
+    <div *ngIf="nameEmpty" class="validationMessage">
+      Name cannot be empty
+    </div>
+    <br/>
+    <button type="submit" class="profileButton" *ngIf="isEditMode == true">Save changes</button>
+    <button type="button" class="profileButton" (click)="editUser()" *ngIf="isEditMode == false">Edit account</button>
+    <button type="button" class="profileButton"  (click)="back(profileForm)" *ngIf="isEditMode == true">Back</button>
+    <button type="button" class="profileButton deleteButton" (click)="deleteAccount()" *ngIf="isEditMode == false">Delete account</button>
+  </form>
+</div>
+
+<div class="empty-div"></div>

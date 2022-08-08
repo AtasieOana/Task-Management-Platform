@@ -1,0 +1,8 @@
+<div class="message-container" [ngStyle]="{'text-align':isSender === true ? 'right' : 'left'}">
+  <div class="sender-message">
+    Send by {{userMessage.chatMessage.sender.name}}
+  </div>
+  <div class="content-message" [ngStyle]="{'color':isSeen === false ? 'red' : 'black'}">
+    {{userMessage.chatMessage.messageContent}}
+  </div>
+</div>

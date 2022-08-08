@@ -1,0 +1,9 @@
+<div class = "calendar-task-card" [style.border-color]="task.labelColor != '' ? task.labelColor : 'darkcyan'">
+   <p class = "calendar-task-title">{{task.title}}</p>
+   <p class = "calendar-task-subtitle" [style.border-bottom-color]="task.labelColor != '' ? task.labelColor : 'darkcyan'">Created by {{task.ownerUser.name}} on {{task.createDate | date:'yyyy-MM-dd'}}</p>
+   <p class = "calendar-task-content" *ngIf="task.content"> <span class="content-class">Content: </span> &nbsp; "{{task.content}}"</p>
+    <p class = "calendar-task-content" *ngIf="task.startDate"> <span class="content-class">Start date: </span> &nbsp; {{task.startDate | date:'yyyy-MM-dd'}}</p>
+    <p class = "calendar-task-content" *ngIf="task.endDate"> <span class="content-class">End date: </span> &nbsp; {{task.endDate | date:'yyyy-MM-dd'}}</p>
+    <p class = "calendar-task-board"> See task in board <span class="board-class" [style.text-decoration-color]="task.labelColor != '' ?
+        task.labelColor : 'darkcyan'" (click)="goToBoard()">{{task.taskList.board.name}}</span></p>
+</div>

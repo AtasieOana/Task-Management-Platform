@@ -1,0 +1,59 @@
+.title{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.inbox-class{
+  padding-bottom: 30px;
+  display: block;
+}
+
+.empty{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  font-weight: bolder;
+  font-size: x-large;
+  color: red;
+}
+
+.no-messages{
+  width:400px;
+  height:300px;
+  display:block;
+  margin:auto;
+}
+
+.empty-inbox-div{
+  background-color: rgba(0, 139, 139, 0.1);
+  padding-bottom: 5px;
+  margin: auto;
+  width: 65%;
+}
+
+
+@media (max-width: 900px) {
+  .no-messages{
+    width:350px;
+    height:250px;
+  }
+
+  .empty-inbox-div{
+    width:80%
+  }
+}
+
+@media (max-width: 400px) {
+  .no-messages{
+    width:175px;
+    height:150px;
+  }
+
+  .empty-inbox-div{
+    width:80%
+  }
+}

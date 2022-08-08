@@ -1,0 +1,4 @@
+<div class="message-container" (click)="markAsRead()"[style.background-color]="!inboxMessage.seen ? 'rgba(255,0,0,0.4)' : 'rgba(0, 139, 139, 0.1)'">
+  <p class="message-date">Date: <span>{{sendDate}}</span></p>
+  <p class="message-content">{{inboxMessage.message}}</p>
+</div>

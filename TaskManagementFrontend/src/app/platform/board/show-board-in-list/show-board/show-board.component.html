@@ -1,0 +1,50 @@
+<app-private-menu></app-private-menu>
+<div class="display-flex">
+  <span class="class-elements">
+    <label>
+      <input class="board-name"  type='text'  [(ngModel)]="boardName" (change)="changeBoardName($event)" [readonly]="userBoard.userType != 'admin'">
+    </label>
+  </span>
+  <button *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'" class="class-elements" (click)="createTaskList()" [disabled]="alreadyExist">Add new list</button>
+  <div class="class-elements" (click)="seeUsers($event)">See users</div>
+  <button class="class-elements" (click)="removeBoard()" *ngIf="userBoard.userType == 'admin'"> Delete board </button>
+  <button class="class-elements" (click)="leaveBoard()" *ngIf="userBoard.userType != 'admin' &&userBoard.userType != 'viewer'"> Leave board </button>
+  <button class="class-elements" (click)="useTemplate()" *ngIf="userBoard.userType == 'viewer'"> Use template </button>
+</div>
+
+<app-rating *ngIf="userBoard.userType == 'viewer'" [userBoard]="userBoard" class="template-rating"></app-rating>
+<button *ngIf="userBoard.userType != 'viewer' && !showOptions" class="show-options" (click)="showOptionsFunction()">Board options > </button>
+<div class="buttons-add-sort">
+  <label class="task-button" *ngIf="userBoard.userType == 'admin' && showOptions">
+    <select class="board-options" name="privacy" [(ngModel)]="initialPrivacy" (change)="selectOption()">
+      <option [value]="true" [selected]="initialPrivacy == true">Private</option>
+      <option [value]="false" [selected]="initialPrivacy == false">Public</option>
+    </select>
+  </label>
+  <button *ngIf="userBoard.userType != 'viewer' && showOptions" class="task-button" (click)="sortTasksByStartDate()" [disabled]="alreadyExist">Tasks ordered by start date</button>
+  <button *ngIf="userBoard.userType != 'viewer'&& showOptions " class="task-button" (click)="sortTasksByEndDate()" [disabled]="alreadyExist">Tasks ordered by end date</button>
+  <button *ngIf="userBoard.userType != 'viewer' && showOptions" class="task-button" (click)="schedulingTasks()" [disabled]="alreadyExist">Tasks scheduling</button>
+</div>
+<button *ngIf="userBoard.userType != 'viewer' && showOptions " (click)="showOptionsFunction()" class="not-show-options"><</button>
+
+<div class="task-list-container">
+  <app-show-task-list  (tasksListChanged)="onTaskListChanged()" [taskList]="taskList" [alreadyExist] = "alreadyExist"
+                       *ngFor="let taskList of taskLists  | paginate: config"  [userBoard]="userBoard"
+                       class="task-list-show"></app-show-task-list>
+</div>
+
+<div class="chat-popup" *ngIf="userBoard.userType != 'viewer'">
+  <div class="chat-header" (click)="showChat()">
+    <div class="chat-title">Chat</div>
+    <div class="messages-number" *ngIf="numberOfUnreadMessages != 0">{{numberOfUnreadMessages}}</div>
+  </div>
+  <div class="chat-component" *ngIf="chatAppear">
+    <app-chat [userBoard]="userBoard" (updateBadge)="updateElements($event)"></app-chat>
+  </div>
+</div>
+
+<div class="pagination" *ngIf="taskLists.length != 0">
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+

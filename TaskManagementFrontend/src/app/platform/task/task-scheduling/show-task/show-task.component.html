@@ -1,0 +1,14 @@
+<mat-card class="task-card" [style.border-color] = "taskShow.labelColor != '' ? taskShow.labelColor : 'darkcyan'">
+  <mat-card-header>
+    <mat-card-title>{{taskShow.title}}</mat-card-title>
+    <mat-card-subtitle>Created by {{taskShow.ownerUser.name}} on {{taskShow.createDate | date:'yyyy-MM-dd'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+    <p class = "task-content" *ngIf="taskShow.content"> <span class="content-class">Content: </span> &nbsp; "{{taskShow.content}}"</p>
+    <p class = "task-content" *ngIf="taskShow.startDate"> <span class="content-class">Start date: </span> &nbsp; {{taskShow.startDate | date:'yyyy-MM-dd'}}</p>
+    <p class = "task-content" *ngIf="taskShow.endDate"> <span class="content-class">End date: </span> &nbsp; {{taskShow.endDate | date:'yyyy-MM-dd'}}</p>
+    <p class = "task-content" *ngIf="realStartDate"> <span class="content-class">Real start date: </span> &nbsp; {{realStartDate | date:'yyyy-MM-dd'}}</p>
+    <p class = "task-content" *ngIf="realEndDate"> <span class="content-class">Real end date: </span> &nbsp; {{realEndDate | date:'yyyy-MM-dd'}}</p>
+  </mat-card-content>
+</mat-card>

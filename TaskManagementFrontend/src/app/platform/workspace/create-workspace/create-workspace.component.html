@@ -1,0 +1,20 @@
+<div class="form-container-adding-elements">
+  <div class = "create-workspace-title">Create new workspace</div>
+  <form #createWorkspaceForm = "ngForm" (ngSubmit) = "onSubmit(createWorkspaceForm)" >
+    <label>
+      Name:
+      <input class="name-input"  type = "text" name = "name" id="name" placeholder = "Enter workspace name..." ngModel required>
+    </label>
+    <div *ngIf="emptyName" class="validationMessage">
+      Name is empty
+    </div>
+    <br *ngIf="!emptyName"/>
+    <label>
+      Background color:
+      <input class="color-input" type = "color" name = "color" id="color" [(ngModel)] = "color"/>
+    </label>
+    <br/>
+    <button type="submit" class="submitButtonWorkspace">CREATE</button>
+  </form>
+</div>
+

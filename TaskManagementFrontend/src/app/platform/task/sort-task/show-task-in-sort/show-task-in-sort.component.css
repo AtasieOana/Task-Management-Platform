@@ -1,0 +1,24 @@
+.task-card{
+  margin: 3%;
+  border: 3px black solid;
+}
+
+mat-card-header{
+  background-color: rgba(245, 185, 166, 0.54);
+  padding: 5px;
+}
+
+mat-card-subtitle{
+  margin-bottom: 0;
+  font-style: oblique;
+}
+.content-class{
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.task-content{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}

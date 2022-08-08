@@ -1,0 +1,12 @@
+<div class="list-container">
+  <span class="task-list-name-container">
+    <mat-icon *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'"
+              (click)="deleteTaskList()" >delete_forever</mat-icon>
+    <span class="task-list-name"> {{taskList.name}} </span>
+    <mat-icon *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'"
+              (click)="editTaskList()">edit</mat-icon>
+  </span>
+  <div>
+    <app-task-list [userBoard]="userBoard" [taskList] = "taskList"></app-task-list>
+  </div>
+</div>

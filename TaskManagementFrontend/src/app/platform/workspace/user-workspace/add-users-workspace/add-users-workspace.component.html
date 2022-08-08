@@ -1,0 +1,36 @@
+<div class="form-container-adding-elements">
+
+  <div class="x-button" (click)="close()">
+    X
+  </div>
+
+  <div class="user-list-div">
+     <app-show-user (usersUpdate)="getUsersOnWorkspace()" [userWorkspaceForCurrentUser] = "userWorkspaceForCurrentUser" [userWorkspace]="userWorkspace" *ngFor="let userWorkspace of usersOnWorkspace" ></app-show-user>
+  </div>
+
+  <div class="add-user-div" [ngStyle]="{'border-color': userWorkspaceForCurrentUser.workspace.backgroundColor}" *ngIf="userIsAdmin">
+    <form #addUserForm = "ngForm" (ngSubmit) = "onSubmit(addUserForm)" >
+      <div class = "form-user">
+      <label>
+        <input type = "email" name = "email" id="email" placeholder="Email address" ngModel required>
+      </label>
+      <label class = "user-role">
+        User role:
+        <br/>
+        <span class ="radio-user-role">
+          <input id="'admin'"  type="radio" [checked]="userRole == 'admin'" (change)="onUserRoleChange('admin')"> <span>Admin</span>
+          <input id="'simpleUser'"  type="radio" [checked]="userRole == 'simpleUser'" (change)="onUserRoleChange('simpleUser')"> <span>Simple user</span>
+        </span>
+      </label>
+      </div>
+      <div *ngIf="emptyEmail" class="validationMessage">
+        Email is empty
+      </div>
+      <div *ngIf="userNotExist" class="validationMessage">
+        The user does not exist or is already in the workspace
+      </div>
+      <br *ngIf="!emptyEmail && !userNotExist"/>
+      <button type="submit" class="submitButtonUser" [ngStyle]="{'background-color': userWorkspaceForCurrentUser.workspace.backgroundColor}">Add user</button>
+    </form>
+  </div>
+</div>

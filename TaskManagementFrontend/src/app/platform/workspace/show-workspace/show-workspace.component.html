@@ -1,0 +1,25 @@
+<app-private-menu></app-private-menu>
+<div class="workspace-header">
+
+  <div class="workspace-title">
+    <input class="workspace-input" type='text'  [(ngModel)]="workspaceName"
+           spellcheck="false" (change)="changeWorkspaceName($event)" [readonly]="userWorkspace.userType != 'admin'">
+  </div>
+
+  <span class="buttons-span">
+    <div class="users-div">
+      <button class="button-users" [disabled]="alreadyExist" (click)="seeUsers()" >Users on workspace</button>
+    </div>
+
+    <div class="board-div">
+      <button class="add-board-button" (click)="createBoard()" *ngIf="userWorkspace.userType == 'admin'" [disabled]="alreadyExist" >Add board</button>
+    </div>
+
+    <div class="buttons-div">
+      <button class="button-remove" (click)="deleteWorkspace()" *ngIf="userWorkspace.userType == 'admin'"> Delete workspace </button>
+      <button class="button-remove" (click)="leaveWorkspace()" *ngIf="userWorkspace.userType != 'admin'"> Leave workspace </button>
+    </div>
+
+  </span>
+  <app-board-tab [userBoardsFromWorkspace] = "boardsFromWorkspace" [workspaceId] = "workspaceId" ></app-board-tab>
+</div>

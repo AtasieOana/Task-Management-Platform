@@ -1,0 +1,10 @@
+<div class = "task-list-container">
+  <div class = "task-list-drop" cdkDropList [cdkDropListData]="tasks"
+       (cdkDropListDropped)="onDrop($event)" [id]="taskList.id" [cdkDropListConnectedTo]="allTaskListsId">
+    <app-task (taskListChanged)="onTaskListChanged()" cdkDrag [userBoard]="userBoard" [cdkDragDisabled]="userBoard.userType == 'simpleUser' || userBoard.userType == 'viewer'"
+            [taskList] = "taskList" [task]="task" *ngFor="let task of tasks"> </app-task>
+  </div>
+  <span *ngIf="userBoard.userType != 'simpleUser' && userBoard.userType != 'viewer'" class="add-task">
+    <button class="add-task-button" (click)="addTask($event)">Add task</button>
+  </span>
+</div>

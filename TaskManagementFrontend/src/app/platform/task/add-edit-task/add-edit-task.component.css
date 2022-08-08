@@ -1,0 +1,63 @@
+.required:after {
+  content:" *";
+  color: red;
+}
+
+.submitButtonTask{
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.create-edit-task-title{
+  background-color: darkcyan;
+  color: white;
+  font-size: larger;
+  padding: 6px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.emptyName{
+  margin-bottom: 5px;
+}
+
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+
+.close-button{
+  width: 30%;
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+textarea {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+
+  .form-container-adding-elements {
+    width: 75%;
+  }
+}

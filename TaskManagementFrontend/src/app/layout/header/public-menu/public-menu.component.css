@@ -1,0 +1,33 @@
+body {
+  margin:0;
+}
+
+.appNameText{
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: x-large;
+  text-align: center;
+  display: inline-block;
+  padding:3px 3px;
+  cursor: context-menu;
+}
+
+nav{
+  background-color: darkcyan;
+  height: 42px;
+}
+
+a{
+  color: white !important;
+  font-size: larger;
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (max-width: 400px) {
+  .appNameText{
+    font-size: 18px;
+  }
+
+}
+

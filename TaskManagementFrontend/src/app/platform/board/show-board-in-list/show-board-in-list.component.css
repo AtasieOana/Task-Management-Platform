@@ -1,0 +1,27 @@
+.card-wrapper{
+  margin: 10px;
+  cursor: pointer;
+}
+
+.show-board-card{
+  padding:0;
+  box-shadow: 0 4px 2px -1px rgba(103, 58, 183, 0.50),
+  0 3px 3px 0 rgba(103, 58, 183, 0.50),
+  0 3px 3px 0 rgba(103, 58, 183, 0.50);
+}
+
+.show-board-card mat-card-header{
+  border-bottom: black 3px solid;
+}
+
+.show-board-card mat-card-footer{
+  margin: 0;
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.empty-p{
+  height: 55px;
+}

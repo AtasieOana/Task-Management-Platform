@@ -1,0 +1,7 @@
+<mat-list class="form-container" [style.position]="'absolute'" [style.top.px]="mouseY">
+  <app-user-in-board (userListChanged)="onUsersListChanged()" [alreadyExist]="alreadyExist" [userBoardLoggedUser] = "userBoard" [userWorkspaceForLoggedUser] = "userWorkspaceForLoggedUser" [userShow]="user" *ngFor="let user of users"></app-user-in-board>
+  <button type="button" class="close-button" (click)="close()">X</button>
+  <button type="button" class="add-button" (click)="addUsersOnBoard()" [disabled]="alreadyExist"  *ngIf="userBoard.userType == 'admin' && this.userWorkspaceForLoggedUser.workspace.id == ''" >
+     Add collaborators</button>
+</mat-list>
+

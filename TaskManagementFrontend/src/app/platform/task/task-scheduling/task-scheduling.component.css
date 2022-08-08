@@ -1,0 +1,47 @@
+.empty-tasks{
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color:red;
+}
+
+.title{
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: 40px 20px 40px;
+}
+
+.subtitle{
+  margin: 20px;
+  font-size: large;
+  text-align: justify;
+}
+
+.ps{
+  margin: 20px;
+  font-size: 14px;
+  text-align: justify;
+  color: red;
+  font-style: oblique;
+}
+
+.lateness{
+  margin: 20px;
+  font-size: large;
+  text-align: justify;
+}
+
+.lateness-format{
+  color: red;
+  font-style: oblique;
+  text-decoration: underline;
+}

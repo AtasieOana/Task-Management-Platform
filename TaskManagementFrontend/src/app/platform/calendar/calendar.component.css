@@ -1,0 +1,53 @@
+.calendar-container{
+  width: 95%;
+  margin: 50px 0 10px 30px;
+}
+
+.buttons-calendar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 9%;
+}
+
+.btn-movement{
+  background-color: #673ab7;
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.btn-current{
+  color: #673ab7;
+  padding: 10px;
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 3px;
+  text-decoration-line: underline;
+  text-underline-color: #673ab7;
+}
+
+@media (max-width: 860px) {
+  .calendar-container{
+    margin: 50px 0 10px 10px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .btn-movement, .btn-current{
+    padding: 5px;
+  }
+
+  .calendar-container{
+    margin: 30px 0 5px 5px;
+  }
+
+  .buttons-calendar{
+    gap: 5%;
+  }
+
+}

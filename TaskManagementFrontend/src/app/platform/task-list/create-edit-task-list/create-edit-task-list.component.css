@@ -1,0 +1,49 @@
+.create-edit-task-list-title{
+  background-color: darkcyan;
+  color: white;
+  font-size: larger;
+  padding: 6px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+label{
+  width: 80%;
+  vertical-align: middle;
+  align-items: center;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+
+input{
+  font-size: large;
+  width: 60%;
+}
+
+.submitButtonList{
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  input{
+    width: 53%;
+  }
+
+}

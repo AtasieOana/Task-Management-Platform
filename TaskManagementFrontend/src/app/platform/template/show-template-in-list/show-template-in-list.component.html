@@ -1,0 +1,12 @@
+<div class="card-wrapper">
+
+  <mat-card class="show-template-card" (click)="openBoard()">
+    <mat-card-header [style.background-color]="getBackgroundColor()">
+      <p class="empty-p"></p>
+    </mat-card-header>
+    <mat-card-footer>
+      {{board.name}}
+    </mat-card-footer>
+  </mat-card>
+
+</div>

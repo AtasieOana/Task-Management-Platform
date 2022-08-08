@@ -1,0 +1,219 @@
+.display-flex, .buttons-add-sort{
+  display: inline-flex;
+  width: 100%;
+  margin-top: 3%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.class-elements, .task-button, .show-options, .not-show-options{
+  font-size: large;
+  border: 3px lightseagreen solid;
+  background-color: darkcyan;
+  width: 30%;
+  text-align: center;
+  padding: 2px;
+  color:white;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-family: Arial, serif;
+  font-weight: normal;
+  height: 40px;
+}
+
+.show-options{
+  width: 19%;
+  margin-top: 10px;
+}
+
+.not-show-options{
+  width: 19%;
+  margin-top: 10px;
+  float:right;
+  margin-right: 3%;
+  margin-bottom: 30px;
+}
+
+.display-flex button, .show-options, .not-show-options{
+  font-weight: bolder;
+  font-size: medium;
+  font-family: Arial, serif;
+}
+
+.board-options{
+  font-weight: bolder;
+  font-size: large;
+  border: none;
+  background-color: darkcyan;
+  text-align: center;
+  color:white;
+  font-family: Arial, serif;
+  width: 100%;
+}
+
+.board-options:focus{
+  outline: none;
+}
+
+.board-name{
+  font-size: large;
+  border: none;
+  background-color: darkcyan;
+  width: 70%;
+  text-align: center;
+  padding: 5px;
+  color:white;
+  font-weight: bold;
+  font-family: Arial, serif;
+}
+
+.display-flex div{
+  font-weight: bolder;
+  font-size: medium;
+  font-family: Arial, serif;
+}
+
+.task-list-container{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  flex-direction: row;
+  width: 60%;
+}
+
+.buttons-add-sort{
+  margin-top: 10px;
+}
+
+.task-button{
+  font-weight: bold;
+  font-family: Arial, serif;
+  font-size: medium;
+}
+
+input:focus{
+  outline: none;
+}
+
+.task-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 4%;
+  flex-direction: row;
+  width: 95%;
+}
+
+.task-list-show{
+  width: 48%;
+}
+
+.pagination{
+  margin-top: 50px;
+  display: flex !important;
+  justify-content: center !important;
+  background-color: rgb(255, 235, 205);
+  border: 2px solid grey;
+}
+
+.class-elements label{
+  margin: 0;
+}
+
+.chat-popup{
+  margin-right: 3%;
+  right: 0;
+  position: fixed;
+  bottom: 0;
+  background-color: lightseagreen;
+  width: 30%;
+}
+
+.chat-component{
+  border: 3px forestgreen solid;
+  border-top: none;
+  width: 100%;
+  background-color: whitesmoke;
+  height: 300px;
+}
+
+.chat-header{
+  width: 100%;
+  padding: 5px 8%;
+  border: 3px darkgreen solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.chat-title{
+  font-weight: bolder;
+  font-size: large;
+  font-family: Arial, serif;
+}
+
+.messages-number {
+  font-size: medium;
+  font-family: Arial, serif;
+  font-weight: bold;
+  border: 2px darkgreen solid;
+  padding: 0 5px;
+  background-color: indianred;
+  border-radius: 50%;
+}
+
+.template-rating{
+  float:right;
+  margin-right: 3%;
+  margin-top: 10px;
+  background-color: darkcyan;
+  border: 3px lightseagreen solid;
+}
+
+@media (max-width: 800px) {
+
+  .buttons-add-sort{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .task-button{
+      width: 44%;
+  }
+
+  .task-button:nth-of-type(2){
+    margin-top: 3%;
+  }
+
+  .task-button:nth-of-type(3){
+    margin-top: 3%;
+  }
+
+  .task-list-container{
+    flex-direction: column;
+  }
+
+  .task-list-show{
+    width: 90%;
+  }
+
+  .chat-popup{
+    width: 40%;
+  }
+
+  .chat-component{
+    height: 200px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .show-options, .task-button, .class-elements{
+    height: 70px;
+  }
+
+
+}

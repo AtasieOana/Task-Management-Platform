@@ -1,0 +1,17 @@
+.message-container{
+  padding: 5px;
+  word-break: break-word;
+}
+
+.sender-message{
+  font-size: xx-small;
+  font-style: italic;
+  font-family: Arial, serif;
+  color: grey;
+}
+
+.content-message{
+  font-size: 15px;
+  font-family: Arial, serif;
+}
+

@@ -1,0 +1,11 @@
+.message-container{
+  border-top: 2px darkgrey solid;
+}
+
+.message-date{
+  text-align: center;
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-color: grey;
+  font-size: medium;
+}

@@ -1,0 +1,63 @@
+.task-card{
+  font-size: medium;
+  font-weight: normal;
+  border: 5px ridge beige;
+  margin: 5px;
+}
+
+.task-label{
+  width: 15%;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.task-creation{
+  font-style: italic;
+  font-size: small;
+  font-weight: lighter;
+}
+
+.task-title{
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0;
+  display:flex;
+  justify-content: flex-end;
+  text-decoration-line: underline;
+}
+
+.task-icons{
+  display:flex;
+  justify-content: space-between;
+}
+
+.task-user{
+  padding-left: 20px;
+}
+
+.task-content{
+  text-align: justify;
+}
+
+.task-date-message{
+  font-size: small;
+  font-style: italic;
+  color:red;
+}
+
+.icon-align mat-icon{
+  margin-right: 10px !important;
+}
+
+.task-user {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.task-user li:before {
+  content: "📌";
+}
+

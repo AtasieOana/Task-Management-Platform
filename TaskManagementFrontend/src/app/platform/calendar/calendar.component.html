@@ -1,0 +1,16 @@
+<div class="buttons-calendar">
+  <div class="btn-movement" mwlCalendarPreviousView (click)="getNewMonth()" [view]="view" [(viewDate)]="viewDate">
+    Previous
+  </div>
+  <div class="btn-current" mwlCalendarToday [(viewDate)]="viewDate" >
+    {{currentMonth}}
+  </div>
+  <div class="btn-movement" (click)="getNewMonth()" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate">
+    Next
+  </div>
+</div>
+
+<div class="calendar-container">
+  <mwl-calendar-month-view [viewDate]="viewDate" [events]="events" (eventClicked)="eventClicked($event)">
+  </mwl-calendar-month-view>
+</div>

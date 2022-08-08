@@ -1,0 +1,26 @@
+.message-container{
+  border-bottom: 3px solid darkcyan;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.message-content {
+  margin: 5px 5px 5px 15px;
+  color: black;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.message-date {
+  margin: 5px 15px 5px 5px;
+  color: black;
+  font-weight: 500;
+  text-align: right;
+  font-size: medium;
+}
+
+.message-date span {
+  text-decoration-line: underline;
+}

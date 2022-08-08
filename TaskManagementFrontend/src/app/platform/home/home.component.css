@@ -1,0 +1,42 @@
+:host /deep/ .mat-tab-group {
+  flex-direction: row;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+:host /deep/ .mat-tab-header {
+  border-bottom: none;
+}
+:host /deep/ .mat-tab-header-pagination {
+  display: none !important;
+}
+:host /deep/ .mat-tab-labels {
+  flex-direction: column;
+}
+
+
+:host /deep/ .mat-ink-bar {
+  height: 100%;
+  left: 98% !important;
+}
+:host /deep/ .mat-tab-body-wrapper {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 400px) {
+
+  :host /deep/ .mat-tab-label-content {
+    font-size: 11px !important;
+  }
+
+  :host /deep/ .mat-tab-label {
+    padding-left:  3px !important;
+    padding-right: 3px !important;
+  }
+
+  :host /deep/ .mat-tab-group {
+    margin-left: 0;
+  }
+
+}

@@ -1,0 +1,54 @@
+<div class="form-container-adding-elements">
+  <div class = "create-edit-task-title">
+    <span *ngIf="!isEditMode">Add task</span>
+    <span *ngIf="isEditMode">Edit task</span>
+  </div>
+  <form #taskForm = "ngForm" (ngSubmit) = "onSubmit(taskForm)" >
+    <label class="required">
+      Title:
+      <br/>
+      <input type = "text" name = "title" id="title" placeholder="Title" [ngModel]="task.title" required>
+    </label>
+    <div *ngIf="emptyName" class="validationMessage">
+      Name is empty
+    </div>
+    <br *ngIf="!emptyName"/>
+    <label>
+      Content:
+      <br/>
+      <textarea  type = "text" cols="40" rows="5" name = "content" id="content" placeholder="Content" [ngModel]="task.content"></textarea>
+    </label>
+    <br/>
+    <label>
+      Assign users:
+      <br/>
+      <ng-container *ngFor="let user of users">
+        <input type="checkbox" [checked]="findUserSelected(user, assignedUsers) == true" (change)="checkValues(user)"> {{user.name}}
+      </ng-container>
+    </label>
+    <br/>
+    <label>
+      Label color:
+      <input  type = "color" name = "labelColor" id="labelColor" value="#000000" [ngModel]="task.labelColor"/>
+    </label>
+    <br/>
+    <label>
+      Start date:
+      <input  type = "date" name = "startDate" id="startDate" [ngModel]="task.startDate | date:'yyyy-MM-dd'"/>
+    </label>
+    <br/>
+    <label>
+      End date:
+      <input  type = "date" name = "endDate"  id="endDate" [ngModel]="task.endDate | date:'yyyy-MM-dd'"/>
+    </label>
+    <div *ngIf="wrongDates" class="validationMessage">
+      Start date need to happen before end date
+    </div>
+    <br *ngIf="!wrongDates"/>
+    <br/>
+    <button type="submit" class="submitButtonTask">
+      <span *ngIf="!isEditMode">SAVE TASK</span>
+      <span *ngIf="isEditMode">UPDATE TASK</span>
+    </button>
+  </form>
+</div>

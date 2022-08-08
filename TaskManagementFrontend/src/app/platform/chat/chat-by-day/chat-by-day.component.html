@@ -1,0 +1,4 @@
+<div class="message-container">
+  <div class ="message-date">{{messageDate}}</div>
+  <app-chat-message [userMessage]="userMessage" *ngFor="let userMessage of chatMessageList"></app-chat-message>
+</div>

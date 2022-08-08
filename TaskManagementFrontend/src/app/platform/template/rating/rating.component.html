@@ -1,0 +1,8 @@
+<div class="rating-container">
+  <ngb-rating (rateChange)="onRateChange($event)" [max]="maximumRating" [(rate)]="currentRating"></ngb-rating>
+  <hr>
+  <div class ="rating-media">
+    Template rating: <b>{{averageRating}}</b>
+  </div>
+</div>
+

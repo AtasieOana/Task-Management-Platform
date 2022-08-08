@@ -1,0 +1,15 @@
+<app-private-menu></app-private-menu>
+<mat-tab-group [@.disabled]="true" [(selectedIndex)]="selectIndex" (selectedTabChange)="tabChanged($event)">
+  <mat-tab label="Boards">
+    <app-board-tab #appBoard></app-board-tab>
+  </mat-tab>
+  <mat-tab label="Templates">
+    <app-template-tab #appTemplate></app-template-tab>
+  </mat-tab>
+  <mat-tab label="Workspaces">
+    <app-workspace-tab #appWorkspace></app-workspace-tab>
+  </mat-tab>
+  <mat-tab label="Calendar">
+    <app-calendar></app-calendar>
+  </mat-tab>
+</mat-tab-group>

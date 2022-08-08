@@ -1,0 +1,191 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+.validationMessage{
+  color: red;
+  font-size: medium;
+}
+
+.submitButton{
+  width: 30%;
+  background-color: DarkCyan;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+.ngx-pagination{
+  margin-top: 16px;
+  padding-left: 0;
+}
+
+.ngx-pagination a, .ngx-pagination span{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.ngx-pagination .pagination-previous, .ngx-pagination .pagination-next{
+  color: dimgrey !important;
+  font-weight: bolder;
+}
+
+.ngx-pagination .current {
+  background: darkcyan !important;
+  border-radius: 20px !important;
+  border: transparent !important;
+}
+
+.icon-align{
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+input:focus{
+  outline: none 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+label{
+  font-weight: 400 !important;
+}
+
+ngb-rating {
+  color: lawngreen;
+  font-size: 4vw;
+  padding: 8px 5px 8px 5px;
+}
+
+hr{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-container-adding-elements{
+  margin: auto;
+  width: 50%;
+  min-height: 100px;
+  text-align: center;
+  border: 5px solid grey;
+  font-size: larger;
+  border-radius: 5px;
+  background-color:  #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+}
+
+.cal-days{
+  width: 100%;
+}
+mwl-calendar-month-view-header .cal-cell-row {
+  width: 100%;
+}
+.mat-tab-body-content{
+  overflow-x:hidden;
+}
+
+.cal-month-view .cal-event{
+  background-color: darkcyan;
+}
+
+.cal-month-view .cal-day-cell.cal-today{
+  background-color: lightgoldenrodyellow;
+}
+
+.cal-month-view .cal-cell-row .cal-cell:hover, .cal-month-view .cal-cell.cal-has-events.cal-open{
+  background-color: darksalmon;
+}
+
+.cal-day-number{
+  color: black;
+}
+
+.mat-tab-body-content{
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  margin-right: 5px;
+  margin-left: 3px;
+}
+
+.mat-tab-body-content::-webkit-scrollbar {
+  width: 15px;
+}
+
+.mat-tab-body-content::-webkit-scrollbar-track {
+  background-color: lightgrey;
+  border-radius: 100px;
+}
+
+.mat-tab-body-content::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, darkcyan 0%, #24d790 80%);
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.search-input{
+  width: 50%;
+  height: 40px;
+  font-family: Arial, FontAwesome, serif;
+  border-radius: 50px;
+  border: darkcyan 2px solid;
+  padding-left: 15px;
+}
+
+.search-input::placeholder {
+  padding-left: 1px;
+}
+
+@media (max-width: 800px) {
+
+  .form-container-adding-elements {
+    width: 75%;
+  }
+
+}
+
+@media (max-width: 690px) {
+
+  ngb-rating {
+    font-size: 7vw;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .submitButton{
+    width: 75%;
+  }
+
+}

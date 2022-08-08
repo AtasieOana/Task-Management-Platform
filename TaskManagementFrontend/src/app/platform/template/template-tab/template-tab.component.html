@@ -1,0 +1,22 @@
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"/>
+
+<div class="search">
+  <input class="search-input fa" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xf002;  Search template">
+</div>
+
+<div class="filter">
+  <label for="rating">See templates with rating over </label>
+  <select name="rating" id="rating" [(ngModel)]="filterValue">
+    <option value="0">None</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</div>
+
+
+<div class = "template-list">
+  <app-show-template-in-list class = "board-element"  [board]="boardWithRatings[0]" *ngFor="let boardWithRatings of boardsWithRatings | searchFilter:searchText | filterPipe: filterValue"></app-show-template-in-list>
+</div>

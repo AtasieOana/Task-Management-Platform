@@ -1,0 +1,15 @@
+<div class = "chat-content" (click)="markAsSeenAllMessages()">
+  <div class="chat-all-elements">
+    <app-chat-by-day class = "chat-element" [chatMessageList]="chatMessageList" *ngFor="let chatMessageList of chatMessagesMatrix"></app-chat-by-day>
+  </div>
+  <div class="chat-send-container">
+    <form #sendMessageForm = "ngForm" (ngSubmit) = "onSubmit(sendMessageForm)">
+      <span class="chat-send">
+        <input type="text" placeholder="Type a message" name="newMessage" autocomplete="off" ngModel>
+        <button class="msg_send_btn" type="submit">
+          <i-bs name="caret-right-square-fill"></i-bs>
+        </button>
+      </span>
+    </form>
+  </div>
+</div>

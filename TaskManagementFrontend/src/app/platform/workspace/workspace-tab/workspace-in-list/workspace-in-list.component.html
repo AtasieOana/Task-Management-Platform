@@ -1,0 +1,12 @@
+<div class="card-wrapper">
+
+  <mat-card class="show-workspace-card" (click)="openWorkspace()">
+    <mat-card-header [style.background-color]="getBackgroundColor()">
+      <p class="empty-p"></p>
+    </mat-card-header>
+    <mat-card-footer>
+      {{userWorkspace.workspace.name}}
+    </mat-card-footer>
+  </mat-card>
+
+</div>

@@ -1,0 +1,68 @@
+.create-board-title{
+  background-color: darkcyan;
+  color: white;
+  font-size: larger;
+  padding: 6px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+label{
+  width: 80%;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.name-input{
+  width: 80%;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.color-input{
+  width: 35%;
+}
+input[type="radio"]{
+  margin-left: 10px;
+}
+
+.radio-text{
+  margin-left: 3px;
+}
+
+.validationMessage{
+  margin-bottom: 5px !important;
+}
+
+.submitButtonBoard{
+  width: 40%;
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  margin-top: 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.radio-privacy{
+  display: inline-flex;
+  font-weight: normal !important;
+  font-size: large !important;
+}
+
+@media (max-width: 600px) {
+  .name-input{
+    width: 70%;
+  }
+
+}

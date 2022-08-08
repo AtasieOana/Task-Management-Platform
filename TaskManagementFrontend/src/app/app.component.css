@@ -1,0 +1,15 @@
+#principalPage{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#signIn{
+  width: 50%;
+  border-right: 2px outset lightgray;
+}
+
+#login{
+  width: 48%;
+}
+
+

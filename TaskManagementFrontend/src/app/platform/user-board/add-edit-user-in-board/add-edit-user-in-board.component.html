@@ -1,0 +1,34 @@
+<div class="form-container-adding-elements">
+  <div class = "add-edit-user">
+    <span *ngIf="!isEditMode">Add new user</span>
+    <span *ngIf="isEditMode">Edit user role</span>
+  </div>
+  <form #addEditUserForm = "ngForm" (ngSubmit) = "onSubmit(addEditUserForm)" >
+    <label>
+      User email:
+      <input type = "email" name = "email" id="email" placeholder="Enter user email..." [(ngModel)] = "user.email" required [readonly]="isEditMode">
+    </label>
+    <div *ngIf="emptyEmail" class="validationMessage">
+      Email is empty
+    </div>
+    <div *ngIf="userNotExist" class="validationMessage">
+      The user does not exist or is already in the board
+    </div>
+    <br *ngIf="!emptyEmail && !userNotExist"/>
+
+    <label>
+      User role:
+      <br/>
+      <span class ="radio-user-role">
+        <input id="'admin'"  type="radio" [checked]="userRole == 'admin'" (change)="onUserRoleChange('admin')">Admin<br>
+        <input id="'editor'"  type="radio" [checked]="userRole == 'editor'" (change)="onUserRoleChange('editor')">Editor<br>
+        <input id="'simpleUser'"  type="radio" [checked]="userRole == 'simpleUser'" (change)="onUserRoleChange('simpleUser')">Simple user<br>
+      </span>
+    </label>
+    <br/>
+    <button type="submit" class="submitButtonUser">
+      <span *ngIf="!isEditMode">ADD</span>
+      <span *ngIf="isEditMode">SAVE</span>
+    </button>
+  </form>
+</div>

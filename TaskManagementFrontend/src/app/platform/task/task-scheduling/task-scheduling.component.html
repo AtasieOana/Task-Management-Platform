@@ -1,0 +1,24 @@
+<div class="title"> Tasks scheduling suggestions</div>
+<div class = "subtitle" *ngIf="tasks.length != 0">
+  &nbsp; Below is the recommended order of tasks to be solved so that the delay is minimal:
+</div>
+<div class = "ps" *ngIf="tasks.length != 0">
+  * For tasks without a start date, the start date for work on those tasks was considered the closest available date.
+  <br>
+  * For tasks without an end date, the end date of work on those tasks was considered the start date plus one day.
+  <br>
+  * For the order below, it was considered that the tasks could not overlap.
+</div>
+<div class="mat-tasks">
+  <div class = "content-mat">
+    <app-show-task [realStartDate]="realStartDates[i]" [realEndDate]="realEndDates[i]" [taskShow]="task" *ngFor="let task of tasks; index as i"></app-show-task>
+  </div>
+</div>
+
+<div class = "lateness" *ngIf="tasks.length != 0">
+  &nbsp;  Maximum lateness that appear is: <span class="lateness-format"> {{maxLatenessFormat}} </span>.
+</div>
+
+<div class="empty-tasks" *ngIf="tasks.length == 0">
+  You have no assigned tasks yet.
+</div>

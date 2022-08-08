@@ -1,0 +1,13 @@
+<div class="workspace-show-user">
+  <div class="user-icon-div">
+    <mat-icon matTooltip="Delete user" (click)="deleteUser()" *ngIf="userIsAdmin && !userIsCurrent">delete_forever</mat-icon>
+  </div>
+  <div class="user-name-div">
+    {{userWorkspace.user.name}}
+  </div>
+  <div class = "edit-user-div">
+    <mat-icon matTooltip="Edit user" (click)="showButton()" *ngIf="userIsAdmin && !userIsCurrent && !isEditing">edit</mat-icon>
+    <button class = "edit-user" (click)="updateUser()"  *ngIf="userIsAdmin && !userIsCurrent && isEditing"
+            [ngStyle]="{'background-color': userWorkspaceForCurrentUser.workspace.backgroundColor}">Make {{this.userRoleOpposite}}</button>
+  </div>
+</div>

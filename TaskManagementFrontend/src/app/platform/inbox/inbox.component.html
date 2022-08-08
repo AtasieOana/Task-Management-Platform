@@ -1,0 +1,9 @@
+<app-private-menu></app-private-menu>
+<div class="inbox-class">
+  <p class="title">YOUR INBOX</p>
+  <app-message [inboxMessage]="inboxMessage" *ngFor="let inboxMessage of inboxMessages" (inboxModified)="getInboxMessages()"></app-message>
+  <div *ngIf="inboxMessages.length == 0" class="empty-inbox-div">
+    <img class="no-messages" src="./assets/Empty_Inbox.png" alt="No messages yet">
+    <p  class="empty">Your inbox is currently empty</p>
+  </div>
+</div>

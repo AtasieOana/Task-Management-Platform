@@ -1,0 +1,20 @@
+<div class="form-container-adding-elements">
+  <div class = "create-edit-task-list-title">
+    <span *ngIf="!isEditMode">Add new list</span>
+    <span *ngIf="isEditMode">Rename list</span>
+  </div>
+  <form #createEditTaskListForm = "ngForm" (ngSubmit) = "onSubmit(createEditTaskListForm)" >
+    <label>
+      Enter list name:
+      <input type = "text" name = "new" id="new" placeholder="List name..." [ngModel]="taskList.name"  required>
+    </label>
+    <div *ngIf="emptyName" class="validationMessage">
+      Name is empty
+    </div>
+    <br *ngIf="!emptyName"/>
+    <button type="submit" class="submitButtonList">
+      <span *ngIf="!isEditMode">ADD</span>
+      <span *ngIf="isEditMode">RENAME</span>
+    </button>
+  </form>
+</div>

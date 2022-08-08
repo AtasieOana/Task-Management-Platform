@@ -1,0 +1,18 @@
+
+<div class="mat-tasks" *ngIf="tasks.length != 0 || tasksAfterSort.length != 0">
+  <div class = "content-mat">
+    <p class="subtitle"> Tasks order by {{showWords}}</p>
+
+    <app-show-task-in-sort  [taskShow]="task" *ngFor="let task of tasks"></app-show-task-in-sort>
+
+    <p class="subtitle"> Tasks without {{showWords}}</p>
+
+    <app-show-task-in-sort  [taskShow]="task" *ngFor="let task of tasksAfterSort"></app-show-task-in-sort>
+  </div>
+</div>
+
+
+<div class="empty-tasks" *ngIf="tasks.length == 0 && tasksAfterSort.length == 0">
+  No tasks have been added yet, so tasks cannot be displayed in order.
+</div>
+

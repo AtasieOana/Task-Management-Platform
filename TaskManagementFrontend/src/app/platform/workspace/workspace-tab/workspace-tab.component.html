@@ -1,0 +1,10 @@
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"/>
+
+<div class="search">
+  <input class="search-input fa" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xf002;  Search workspace">
+</div>
+
+<div class = "workspace-list">
+  <button class="create-workspace-button" (click)="createWorkspace()" [disabled]="alreadyExist">Create workspace</button>
+  <app-workspace-in-list class = "workspace-element"  [userWorkspace]="userWorkspace" *ngFor="let userWorkspace of userWorkspaces | searchFilter:searchText "></app-workspace-in-list>
+</div>

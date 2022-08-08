@@ -1,0 +1,30 @@
+<div class="form-container-adding-elements">
+  <div class = "create-board-title">Create new board</div>
+  <form #createBoardForm = "ngForm" (ngSubmit) = "onSubmit(createBoardForm)" >
+    <label>
+      Name:
+      <input class="name-input" type = "text" name = "name" id="name" placeholder = "Enter the board name..." ngModel required>
+    </label>
+    <div *ngIf="emptyName" class="validationMessage">
+      Name is empty
+    </div>
+    <br *ngIf="!emptyName"/>
+    <label>
+      Privacy:
+      <span class ="radio-privacy">
+        <input id="private"  type="radio" [checked]="privacyType" (change)="onPrivacyChanged(true)">
+          <span class="radio-text"> Private </span><br>
+        <input id="public"  type="radio" [checked]="!privacyType" (change)="onPrivacyChanged(false)">
+          <span class="radio-text"> Public </span><br>
+      </span>
+    </label>
+    <br/>
+    <label>
+      Background color:
+      <input class="color-input" type = "color" name = "color" id="color" [(ngModel)] = "color"/>
+    </label>
+    <br/>
+    <button type="submit" class="submitButtonBoard">CREATE</button>
+  </form>
+</div>
+

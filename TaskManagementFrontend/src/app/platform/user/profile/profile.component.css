@@ -1,0 +1,106 @@
+.title{
+  font-size: xx-large;
+  text-align: center;
+  padding: 0;
+  margin: 50px 40px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.form-container{
+  width: 50%;
+  text-align: center;
+  border: 3px outset darkcyan;
+  font-size: larger;
+  border-radius: 5px;
+  background-color: rgba(0, 135, 134, 0.25);
+  padding: 20px;
+  margin: auto;
+}
+
+.empty-div{
+  min-height: 30px;
+}
+
+label{
+  width: 100%;
+  font-size: 18px;
+  color: black;
+}
+
+input{
+  background-color: darkcyan;
+  color: white;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input{
+  width: 55%;
+  padding: 10px 10px;
+  margin: 15px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  font-size: medium;
+  text-align: center;
+}
+
+input:focus{
+  outline: solid darkblue;
+}
+
+.profileButton{
+  width: 30%;
+  background-color: DarkCyan;
+  color: white;
+  padding: 5px 5px;
+  margin-left: 8px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.deleteButton{
+  background-color: red !important;
+}
+
+
+@media (min-width:600px) and (max-width: 1000px) {
+  .form-container{
+    width: 60%;
+  }
+
+  input{
+    width: 60%;
+  }
+
+  .profileButton {
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .form-container{
+    width: 80%;
+  }
+
+  input{
+    width: 75%;
+  }
+
+  .profileButton {
+    width: 45%;
+  }
+}
+
